@@ -4,7 +4,7 @@ import Axios from 'axios';
 
 import Vehicles from './Vehicles';
 
-export default class App extends Component {
+export default class Home extends Component {
 
     constructor(props) {
         super(props);
@@ -26,7 +26,7 @@ export default class App extends Component {
             <div className="container">
 
                     {vehicles.map(vehicle => (
-                        <div key={vehicle.id}> <Vehicles vehicle={vehicle} /></div>
+                        <div key={vehicle.id}  className="card-container"> <Vehicles vehicle={vehicle} /></div>
 
                     )
 
@@ -35,8 +35,5 @@ export default class App extends Component {
             </div>
         );
     }
-}
 
-if (document.getElementById('app')) {
-    ReactDOM.render(<App />, document.getElementById('app'));
 }
